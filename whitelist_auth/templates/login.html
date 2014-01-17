@@ -43,21 +43,6 @@
 
         <h1 class="page-header">Login</h1>
 
-        {% if message %}
-        <div class="alert alert-error">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <h4>Error!</h4>
-            {% if message == 'nonlisted' %}
-            Your email address is not on our whitelist.
-            Note that this is normal if the site owners have not
-            invited you explicitly.
-            This is a private site.
-            {% else %}
-            {{ message }}
-            {% endif %}
-        </div>
-        {% endif %}
-  
         <div class="alert alert-warning">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <strong>Warning!</strong>
