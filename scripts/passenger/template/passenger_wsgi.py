@@ -13,3 +13,7 @@ sys.path.append(os.path.join(os.getcwd(), projectname))
 os.environ['DJANGO_SETTINGS_MODULE'] = '%s.%s_settings' % (projectname, releasename)
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
+
+# pip install paste and uncomment these lines for easier debugging
+#from paste.exceptions.errormiddleware import ErrorMiddleware
+#application = ErrorMiddleware(application, debug=True)
