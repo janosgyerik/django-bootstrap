@@ -22,3 +22,6 @@ DATABASES = {
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '__regenerate_this__'
+
+from whitelist_auth.auth import require_whitelisted_wrapper
+require_whitelisted_wrapper()
