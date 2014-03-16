@@ -1,5 +1,6 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 cd $(dirname "$0")/..
+. scripts/include.sh
 
-./manage.sh test bs3app
+./manage.sh test ${apps[@]}
