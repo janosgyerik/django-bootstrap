@@ -1,15 +1,18 @@
-projectname = 'djbootstrap'
-releasename = 'beta'
-virtualenv_root = '/path/to/virtualenv/' + projectname
-
 import sys
 import os
 
-INTERP = os.path.join(virtualenv_root, 'bin', 'python')
+CWD = os.getcwd()
+
+projectname = 'djbootstrap'
+releasename = 'beta'
+PROJECT_ROOT = os.path.join(CWD, projectname)
+VIRTUALENV = os.path.join(PROJECT_ROOT, 'virtualenv')
+
+INTERP = os.path.join(VIRTUALENV, 'bin', 'python')
 if sys.executable != INTERP:
     os.execl(INTERP, INTERP, *sys.argv)
 
-sys.path.append(os.path.join(os.getcwd(), projectname))
+sys.path.append(PROJECT_ROOT)
 os.environ['DJANGO_SETTINGS_MODULE'] = '%s.%s_settings' % (projectname, releasename)
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()

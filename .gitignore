@@ -2,6 +2,7 @@
 local
 sqlite3.db*
 /static
+virtualenv
 tmp
 
 # Intellij project files
