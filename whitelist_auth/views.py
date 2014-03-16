@@ -5,7 +5,7 @@ from django.template import RequestContext
 
 
 def login(request):
-    return render_to_response('login.html', { 'next': request.GET.get('next') }, context_instance=RequestContext(request))
+    return render_to_response('login.html', {'next': request.GET.get('next')}, context_instance=RequestContext(request))
 
 
 def logout(request):
