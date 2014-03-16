@@ -1,7 +1,6 @@
 # Install required python packages using pip:
 # pip install -r requirements.txt
 Django==1.6.1
-argparse==1.2.1
 django-social-auth==0.7.28
 httplib2==0.8
 oauth2==1.5.211
