@@ -14,8 +14,8 @@ if sys.executable != INTERP:
 
 sys.path.append(PROJECT_ROOT)
 os.environ['DJANGO_SETTINGS_MODULE'] = '%s.%s_settings' % (projectname, releasename)
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
+from django.core.handlers.wsgi import WSGIHandler
+application = WSGIHandler()
 
 # pip install paste and uncomment these lines for easier debugging
 #from paste.exceptions.errormiddleware import ErrorMiddleware
