@@ -53,6 +53,9 @@
 
         <div class="row">
             <div class="col-lg-8 col-md-9 col-sm-6">
+                <p>STATIC_URL={{ STATIC_URL }}</p>
+                {% load staticfiles %}
+                <p>/static/css={% static 'css' %}</p>
                 <p>is_active={{ user.is_active }}</p>
                 <p>is_staff={{ user.is_staff }}</p>
                 <p>is_superuser={{ user.is_superuser }}</p>
